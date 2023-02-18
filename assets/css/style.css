@@ -1,0 +1,590 @@
+@font-face {
+    font-family: 'solaimanlipi';
+    src: url('../fonts/solaimanlipi/SolaimanLipi_22-02-2012.ttf') format('truetype'), url('../fonts/solaimanlipi/SolaimanLipi_Bold_10-03-12.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'tatsam';
+    src: url('../fonts/tatsambengali/Tatsam_Bengali_Bold.otf') format('opentype'), url('../fonts/tatsambengali/Tatsam_Bengali_Book.otf') format('opentype'), url('../fonts/tatsambengali/Tatsam_Bengali_Demi.otf') format('opentype'), url('../fonts/tatsambengali/Tatsam_Bengali_Light.otf') format('opentype'), url('../fonts/tatsambengali/Tatsam_Bengali_Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'alinur';
+    src: url('../fonts/alinur/Li_Alinur_Abakas_Unicode.ttf') format('truetype'), url('../fonts/alinur/Li_Alinur_Abakas_ANSI_V1.ttf') format('truetype'), url('../fonts/alinur/Li_Alinur_Abakas_ANSI_V2.ttf') format('truetype');
+}
+
+/*
+=============================================================================
+>>>> color variable <<<<
+==============================================================================
+*/
+:root {
+    --primary-color: #10733D;
+    --secondary-color: #1D1D1D;
+}
+/*
+=============================================================================
+DEFAULT STYLE START
+==============================================================================
+*/
+body {
+    font-family: "tatsam", sans-serif;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: #707070;
+    background: #fff;
+}
+h1,h2,h3,h4,h5,h6,p,span,a,strong{
+    font-family: 'tatsam', sans-serif;
+}
+.section-padding {
+    padding: 50px 0;
+}
+.inner-container-padding{
+    padding: 0 75px;
+    position: relative;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li a, ul li a:hover, ul li a:focus, a,a:hover,a:focus{
+text-decoration: none;
+}
+
+.section-title h2 {
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+}
+.section-title-2 h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #8e8e8e;
+    margin-bottom: 30px;
+}
+.section-title-3 h2{
+    font-size: 50px;
+    font-weight: bold;
+    color: #10733d;
+    text-align: center;
+    margin-top: 25px;
+}
+img{
+    max-width: 100%;
+}
+
+.align-center{
+    align-items: center;
+}
+
+
+
+
+/*
+================================================================================
+header style start
+================================================================================
+*/
+
+header.header-section {
+    box-shadow: 0 0 2px #ddd;
+    padding: 25px 0;
+}
+.h-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 10px;
+}
+
+.main-navigation ul li, .social-links ul li {
+    display: inline-block;
+}
+
+.main-navigation ul li a, .social-links ul li a {
+    display: block;
+    color: #707070;
+    text-transform: capitalize;
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: 350;
+}
+
+.social-links ul li a {
+    padding: 15px 5px;
+}
+.social-links ul li a i {
+    font-size: 25px;
+    color: #a3a3a3;
+}
+/**
+================================================================================
+header style end
+================================================================================
+*/
+/**
+================================================================================
+hero section style start
+================================================================================
+*/
+section.hero-section{
+    position: relative;
+    transition: all 0.2s;
+}
+header.header-section.sticky-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+    background: #fff;
+    padding: 5px 0;
+    box-shadow: 0 0 15px #ddd;
+    transition: all 0.2s;
+}
+.bg-image-with-mask {
+    position: relative;
+    overflow: hidden;
+}
+
+img.mask {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img.main-bg {
+    height: 90vh;
+    width: 100%;
+}
+
+img.main-bg {
+    z-index: -1;
+}
+img.thumb {
+    position: absolute;
+    bottom: -100px;
+    right: -60px;
+    z-index: 2;
+    width: 53%;
+}
+.hero-cont p {
+    margin: 0;
+    font-family: alinur, sans-serif;
+}
+
+.hero-cont p.small-p {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "tatsam", sans-serif;
+    color: #707070;
+}
+.hero-cont p.hero-lg-p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "tatsam", sans-serif;
+}
+.hero-cont h1 {
+    margin-bottom: 25px;
+    font-size: 70px;
+    font-family: alinur, sans-serif;
+    font-weight: 400;
+}
+p.name-title {
+    font-size: 30px;
+    font-weight: 400;
+}
+.hero-cont-wrapper {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    z-index: 5;
+    transform: translate(0, -50%);
+    color: #000;
+}
+
+
+
+/*
+================================================================================
+                   About style start
+================================================================================
+*/
+
+
+img.before-shade {
+    position: absolute;
+    left: 70px;
+    top: -16px;
+}
+
+img.after-shade {
+    position: absolute;
+    bottom: -35px;
+    right: -35px;
+    z-index: -1;
+}
+.about-cont {
+    margin-top: 25px;
+}
+
+.read-more a {
+    color: #1d1d1d;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.read-more a:hover {
+    color: var(--secondary-color);
+}
+
+.about-cont .read-more {
+    margin-top: 65px;
+}
+
+.about-cont {
+    margin-left: 25px;
+}
+
+
+
+/*
+================================================================================
+                  Activity style start
+================================================================================
+*/
+
+
+.activity-section{
+    margin-top: 50px;
+    padding-bottom: 0;
+}
+.activity-section .inner-container-padding{
+    position: relative;
+    background: #eefffb;
+    border-radius: 30px;
+}
+.single-activity h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1d1d1d;
+    margin-top: 30px;
+}
+.single-activity img {
+    height: 30px;
+    width: auto !important;
+    margin: 10px;
+}
+
+.owl-nav {
+    text-align: right;
+}
+
+.owl-nav button span {
+    font-size: 30px;
+    display: block;
+}
+
+
+
+/*
+================================================================================
+             Publication style start
+================================================================================
+*/
+
+
+
+.overlay-card {
+    position: relative;
+}
+.overlay-card-cont p {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.overlay-card p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.publication-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+.overlay-card{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.publication-content a:hover img {
+    transform: scale(1.3);
+}
+.overlay-card img {
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.overlay-card-cont:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+================================================================================
+                   Published book section style start
+================================================================================
+*/
+
+section.published-book-section {
+    position: relative;
+    margin: 90px 0;
+}
+.published-book-section .section-title h2 {
+    text-align: left;
+    margin: 25px auto;
+}
+img.pb-bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: -webkit-fill-available;
+    z-index: -1;
+    min-height: 380px;
+}
+.published-book-cont {padding-bottom: 25px;}
+img.published-book-thumb {
+    text-align: right;
+    position: absolute;
+    right: -20px;
+    top: -50px;
+    width: 45%;
+    z-index: 0;
+}
+
+
+/*
+================================================================================
+                News Section Style Start
+================================================================================
+*/
+
+
+section.edit-and-news-section {
+    position: relative;
+    height: 800px;
+}
+
+img.news-bg {
+    position: absolute;
+    z-index: -1;
+    height: 450px;
+}
+
+.news-bloc-wrapper {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    left: 0;
+}
+
+.single-news-bloc .read-more {
+    margin-left: 30px;
+    position: relative;
+    top: -35px;
+    z-index: 1;
+}
+
+
+
+/*
+================================================================================
+            Video section style start
+================================================================================
+*/
+
+
+
+.video-section .section-title h2 {
+    color: #8e8e8e;
+    margin: 25px auto;
+} 
+
+.video-gallery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.video-gallery-wrapper .big {
+    grid-row: 1/2;
+    grid-column: 1/4;
+}
+
+.video-gallery-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+img.play-btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ddd;
+}
+
+.video-gallery-wrapper div.big, .video-gallery-wrapper div.suggest-video {
+    position: relative;
+}
+
+
+/*
+================================================================================
+                       Footer style start
+================================================================================
+*/
+
+
+.footer-top{
+    background: var(--primary-color);
+    padding: 15px 0;
+}
+.footer-first-widget{
+    color: #fff;
+}
+.footer-first-widget p{
+    font-size: 28px;
+    font-weight: normal;
+    color: #fff;
+}
+.footer-first-widget h1{
+    font-size: 76px;
+    font-weight: normal;
+    line-height: 76px;
+    color: #fff;
+}
+.footer-first-widget p, h1{
+    margin: 0;
+    font-family: alinur, sans-serif;
+    margin: 0;
+}
+.after-name{
+    padding-left: 215px;
+}
+.footer-navigation ul{
+    text-align: right;
+}
+.footer-navigation ul li{
+    display: inline-block;
+}
+.footer-navigation ul li a{
+    display: block;
+    color: #fff;
+    padding: 35px 10px;
+    font-size: 16px;
+}
+
+.footer-bottom {
+    background: var(--secondary-color);
+    padding: 15px 0;
+}
+
+.footer-bottom p {
+    color: #fff;
+    margin: 0;
+    font-size: 16px;
+}
+.powerdby{
+    text-align: right;
+}
+
+/*
+================================================================================
+                       Scroll Up style start
+================================================================================
+*/
+
+.back_to_top {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    z-index: 15;
+}
+
+.back_to_top i {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    line-height: 45px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    box-shadow: 0 0 2px #ddd;
+}
+
+
+
+/*
+================================================================================
+                       Simple fade transition Style 
+================================================================================
+*/
+
+
+
+ .mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
